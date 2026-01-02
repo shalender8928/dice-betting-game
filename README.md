@@ -61,4 +61,4 @@ Ask the user whether they want to continue playing.
 ![Game Play Screen](./public/documentation-images/play-game.png)
 
 **Game Result**
-![Game Result](./public/documentation-images/game-result.png)
+![Game Result](./public/documentation-images/game-result-view.png)
