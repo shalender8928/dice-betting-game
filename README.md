@@ -14,16 +14,16 @@ Dice Betting Game
    ```
 3. **Environment Setup**
    ```bash
-  cp .env.example .env
-  php artisan key:generate
+   cp .env.example .env
+   php artisan key:generate
    ```
 4. **Environment Setup**
    ```bash
-  php artisan migrate
+   php artisan migrate
    ```
 5. **Start the Server**
    ```bash
-  php artisan serve
+   php artisan serve
    ```
 
 ## Overview
