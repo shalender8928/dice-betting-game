@@ -26,4 +26,9 @@ class GameService
             default   => 0,
         };
     }
+
+    public function isLowBalance(int $balance): bool
+    {
+        return $balance < 10;
+    }
 }

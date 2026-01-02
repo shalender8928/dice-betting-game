@@ -25,4 +25,16 @@ class PlayGameRequest extends FormRequest
             'bet' => 'required|in:below_7,above_7,lucky_7',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'bet.required' => 'Please a option to bet.',
+        ];
+    }
 }

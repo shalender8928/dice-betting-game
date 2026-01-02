@@ -28,6 +28,15 @@ class GameController extends Controller
     public function create()
     {
         session()->put('balance', session('balance', 100));
+        
+        if ($this->gameService->isLowBalance(session('balance'))) {
+            return redirect()
+                ->route('games.index')
+                ->with('error', 'Your balance is below ₹10. Please reset your balance by clicking the reset button along side with reset icon.')
+                ->with('game_over', true);
+        }
+
+
         return view('games.create');
     }
 
@@ -80,9 +89,7 @@ class GameController extends Controller
         // putting result to session to avoid re-execute the query on page-refresh
         session()->flash('result', [
             ...$diceData,
-            'bet' => $request->bet,
             'result' => $winAmount > 0,
-            'winAmount' => $winAmount,
             'balance' => $balance,
         ]);
 
@@ -96,4 +103,25 @@ class GameController extends Controller
         }
         return view('games.result', session('result'));
     }
+
+    public function exit()
+    {
+        session()->forget([
+            'balance',
+            'result',
+        ]);
+
+        return redirect('/')
+            ->with('success', 'You have exited the game successfully.');
+    }
+
+    public function resetBalance()
+    {
+        session()->put('balance', 100);
+        session()->forget('result');
+
+        return redirect()->route('games.play')
+            ->with('success', 'Game restarted with ₹100 balance.');
+    }
+
 }

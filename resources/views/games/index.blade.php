@@ -4,9 +4,12 @@
 
 @section('content')
 
-<div class="d-flex justify-content-between mb-3">
+<div class="d-flex justify-content-between align-content-center mb-3">
     <h4 class="text-primary">Game History</h4>
-    <a href="{{ route('games.play') }}" class="btn btn-primary btn-sm">Play Now</a>
+    <div class="d-flex align-items-center gap-2">
+        <x-balance />
+        <a href="{{ route('games.play') }}" class="btn btn-primary btn-sm">Play Now</a>
+    </div>
 </div>
 
 <table class="table table-striped">
