@@ -55,10 +55,13 @@ Ask the user whether they want to continue playing.
 ![Welcome Page](./public/documentation-images/welcome-page.png)
 
 **Game History/Logs**
-![Game History/Logs](./public/documentation-images/games(game-logs).png)
+![Game History/Logs](./public/documentation-images/game-logs.png)
 
 **Game Play**
-![Game Play Screen](./public/documentation-images/play-game.png)
+![Game Play Screen](./public/documentation-images/play-game-view.png)
 
 **Game Result**
 ![Game Result](./public/documentation-images/game-result-view.png)
+
+**Reset Game Balance**
+![Game Result](./public/documentation-images/reset-balance-with-error.png)
