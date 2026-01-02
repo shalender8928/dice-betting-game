@@ -17,7 +17,7 @@ Dice Betting Game
    cp .env.example .env
    php artisan key:generate
    ```
-4. **Environment Setup**
+4. **Run Migrations**
    ```bash
    php artisan migrate
    ```
