@@ -1,6 +1,31 @@
 # dice-game (Laravel + Blade)
 Dice Betting Game
 
+## Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/shalender8928/dice-betting-game.git
+   cd dice-betting-game
+   ```
+2. **Install Dependencies**
+   ```bash
+   composer install
+   ```
+3. **Environment Setup**
+   ```bash
+  cp .env.example .env
+  php artisan key:generate
+   ```
+4. **Environment Setup**
+   ```bash
+  php artisan migrate
+   ```
+5. **Start the Server**
+   ```bash
+  php artisan serve
+   ```
+
 ## Overview
 
 **Game Details**
